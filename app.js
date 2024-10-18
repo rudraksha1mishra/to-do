@@ -66,5 +66,15 @@ gsap.from("#myImage", {
     y: -50,
     x: 60,
     width : 300,
-    height : 300               // Move upwards by 50px
+    height : 300              // Move upwards by 50px
+  });
+  gsap.fromTo("li", {
+    scale: 0,          // Start at scale 0 (invisible)
+    opacity: 0         // Fully transparent
+  }, {
+    scale: 1,          // End at scale 1 (full size)
+    opacity: 1,        // Fully visible
+    duration: 0.5,     // Duration of 0.5 seconds per element
+    stagger: 0.2,      // 0.2 seconds delay between each <li> popup
+    ease: "back.out(1.7)" // Elastic 'pop' effect
   });
