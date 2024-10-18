@@ -74,7 +74,7 @@ gsap.from("#myImage", {
   }, {
     scale: 1,          // End at scale 1 (full size)
     opacity: 1,        // Fully visible
-    duration: 0.5,     // Duration of 0.5 seconds per element
-    stagger: 0.2,      // 0.2 seconds delay between each <li> popup
+    duration: 1,     // Duration of 0.5 seconds per element
+    stagger: 0.5,      // 0.2 seconds delay between each <li> popup
     ease: "back.out(1.7)" // Elastic 'pop' effect
   });
