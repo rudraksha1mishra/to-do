@@ -7,7 +7,7 @@ document.querySelector('button').addEventListener('click',()=>{
         const ul = document.querySelector('ul');
         const li = document.createElement('li');
         let button = document.createElement('button');
-        
+        button.classList.add('btndelete');
         button.innerText = 'delete'
     
         li.innerText = message;
@@ -40,8 +40,8 @@ function add(){
         if(key!== 'tasks'){
             let li = document.createElement('li');
             let button = document.createElement('button');
-        
-            button.innerText = 'delete'
+            button.classList.add('btndelete');
+            button.innerHTML = '<img src="delete.png" style="width: 20px; height: 20px; border-radius: 100px; border: none;">';
         
             button.addEventListener('click',()=>{
             localStorage.removeItem(key);
@@ -52,6 +52,7 @@ function add(){
         
             li.innerText = value;
             li.classList.add('my-task-class');
+
             li.appendChild(button);
             ul.appendChild(li);
         }
